@@ -28,6 +28,6 @@ public class Desafio01 {
 			System.out.println("O estado digitado existe!");
 		}else {
 			System.out.println("O estado digitado não existe!");
-		}
+		}leitor.close();
 	}
 }
