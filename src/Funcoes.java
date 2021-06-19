@@ -1,5 +1,14 @@
 
 public class Funcoes {
+	// Função para teste de login
+	public static boolean login  (String user, String pwd) {
+		if (user.equalsIgnoreCase("Comprador")&& pwd.equals("123")){
+			return true;
+		}return false;
+	}
+	// fim da função login
+	
+	
 	public static void somarCarrinho(double[] produtos) {
 		double soma = 0;
 		for(int i=0; i<produtos.length;i++) {

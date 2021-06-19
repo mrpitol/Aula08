@@ -1,26 +1,32 @@
 import java.util.Scanner;
 
-public class FiapStore {
+public class FiapStore2 {
 public static final int TAMANHO_CARRINHO = 5;
 	public static void main(String[] args) {
 		
 		Scanner leitor = new Scanner(System.in);
 		double[] carrinho = new double[TAMANHO_CARRINHO];
 		int opcao = 0;
-		String usuario, senha;
+		String user, pwd;
 		System.out.println("Para entrar no sistema você deve informar seu usuário e sua senha");
 		System.out.println("Digite seu usuário");
-		usuario = leitor.next();
+		user = leitor.next();
 		System.out.println("Digite sua senha");
-		senha = leitor.next();
+		pwd = leitor.next();
 
-		if(usuario.equalsIgnoreCase("COMPRADOR") && senha.equals("123")){
+		/*if(usuario.equalsIgnoreCase("COMPRADOR") && senha.equals("123")){
 			System.out.println("Login bem sucedido!");
 		}else {
 			System.out.println("Usuário ou senha incorretos.");
 			System.exit(1);
+		}*/
+		// Aponta para o arquivo funções e testa os valores user e pwd e retorna se valido =true ou invalido =false
+		if (Funcoes.login(user, pwd)) {
+			System.out.println("login Bem Sucedido");
+		}else {
+			System.out.println("User ou pwd inválidos");
+			System.exit(1);
 		}
-		
 	
 		
 		while(opcao!=3) {
